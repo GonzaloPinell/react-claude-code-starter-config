@@ -1,0 +1,61 @@
+{
+  "hooks": {
+    "PostToolUse": {
+      "type": "bash",
+      "command": "/Users/gonzalopinell/practice/claude/.claude/hooks/post-tool-use.sh",
+      "timeout": 30000
+    }
+  },
+  "automation": {
+    "workflow_enabled": true,
+    "auto_refactor": true,
+    "auto_test": true,
+    "fail_on_errors": false
+  },
+  "agents": {
+    "react-refactor-specialist": {
+      "enabled": true,
+      "auto_trigger": true,
+      "priority": 1
+    },
+    "react-qa-specialist": {
+      "enabled": true,
+      "auto_trigger": true,
+      "priority": 2
+    },
+    "react-ui-specialist": {
+      "enabled": true
+    },
+    "react-uxui-specialist": {
+      "enabled": true
+    },
+    "react-shadcn-specialist": {
+      "enabled": true
+    },
+    "react-zustand-specialist": {
+      "enabled": true
+    },
+    "react-tankstack-query-specialist": {
+      "enabled": true
+    },
+    "react-router-specialist": {
+      "enabled": true
+    }
+  },
+  "testing": {
+    "framework": "vitest",
+    "coverage_threshold": 80,
+    "auto_run": true,
+    "commands": {
+      "test": "npm test",
+      "coverage": "npm run test:coverage",
+      "e2e": "npm run test:e2e"
+    }
+  },
+  "code_quality": {
+    "eslint_enabled": true,
+    "prettier_enabled": true,
+    "typescript_strict": true,
+    "max_function_lines": 20
+  }
+}
